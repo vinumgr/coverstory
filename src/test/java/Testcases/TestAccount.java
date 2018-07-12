@@ -95,6 +95,7 @@ public class TestAccount extends Globals {
 				// Closing the Browser:
 				@AfterTest
 				public void closeBrowser() {
+					driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 					browserClose();
 				}
 
