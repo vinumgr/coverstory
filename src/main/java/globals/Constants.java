@@ -13,13 +13,13 @@ public class Constants {
 	
 	
 	public static String excelFilePath = System.getProperty("user.dir")+"/src/main/java/DataUtilities/LoginData.xlsx";
-	public static String excelFileName = "";
+	/*public static String excelFileName = "";
 	public static String excelSheetName = "";
 	public static String cardnumber = "5123456789012346";
 	public static String cardname = "Test";
 	public static String cardexpiryyear = "2017";
 	public static String cvvnumber = "123";
-	
+	*/
 	
 	//Objects xpath
 	/*public static String AddtoBagSize_PLP = ".//*[@id='productsCatalog']/li[2]/div/div[2]/div[4]/div/div/div/div[3]/div/span[2]";
