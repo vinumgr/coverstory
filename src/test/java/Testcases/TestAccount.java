@@ -92,7 +92,7 @@ public class TestAccount extends Globals {
 						account.keepMeSignedOut.click();
 				}
 				
-				// Closing the Browser
+				// Closing the Browser:
 				@AfterTest
 				public void closeBrowser() {
 					browserClose();

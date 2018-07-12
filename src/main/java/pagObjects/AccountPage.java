@@ -29,8 +29,7 @@ public class AccountPage extends Globals{
 	
 	@FindBy(xpath="//*[@id='CProSaveButton']")
 	public WebElement saveProfileButton;
-	
-	
+		
 	@FindBy(xpath="//*[@id='change_account_password']/a")
 	public WebElement changeAccountPasswordButton;
 	
