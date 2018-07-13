@@ -2,16 +2,8 @@ package Testcases;
 
 import globals.Constants;
 import globals.Globals;
-
-import static org.testng.Assert.assertEquals;
-
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.openqa.selenium.By;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -130,11 +122,11 @@ public class TestCswLogin extends Globals {
 		log(Excelutility.excelData(5, 0, 0));
 
 		lgin.facebookEmailAndPhone.sendKeys(Excelutility.excelData(5, 0, 0));
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 		log(Excelutility.excelData(5, 1, 0));
 		lgin.facebookPassword.sendKeys(Excelutility.excelData(5, 1, 0));
 
-		Thread.sleep(1000);
+		//Thread.sleep(1000);
 
 		lgin.facebookLoginButton.click();
 

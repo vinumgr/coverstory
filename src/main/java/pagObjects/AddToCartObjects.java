@@ -34,7 +34,10 @@ public class AddToCartObjects extends Globals {
 	@FindBy(xpath="//*[@id='productsCatalog']/li[3]/div/div[2]/a/img")
 	public WebElement PLP;	
 	
-	@FindBy(xpath="//*[@id='productsCatalog']/li[16]/div/div[2]/a")
+	/*@FindBy(xpath="//div[starts-with(@class, 'product-')]")
+	public WebElement PLPTwo;*/
+	
+	@FindBy(xpath="//*[@id='productsCatalog']/li[1]/div/div[2]/a")
 	public WebElement PLPTwo;
 	
 	@FindBy(xpath="//span[contains(text(),'XS')]")

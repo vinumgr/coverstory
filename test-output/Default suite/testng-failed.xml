@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Testcases.TestSearch$TestAccount">
+      <class name="Testcases.TestBannerClick">
         <methods>
-          <include name="MyAccountInfo"/>
+          <include name="Banner"/>
           <include name="launchUrl"/>
         </methods>
-      </class> <!-- Testcases.TestSearch$TestAccount -->
+      </class> <!-- Testcases.TestBannerClick -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -8,7 +8,6 @@ import org.testng.annotations.Test;
 import globals.CommonMethods;
 import globals.Globals;
 import pagObjects.AddToCartObjects;
-import pagObjects.LoginPageobjects;
 import pagObjects.QuickViewObjects;
 
 public class TestAddCart extends Globals {
@@ -23,13 +22,12 @@ public class TestAddCart extends Globals {
 	@Test(priority = 0)
 	
 	public void RemoveFromMinicart() throws Exception {
-		LoginPageobjects lgin = new LoginPageobjects(driver);
 		AddToCartObjects addcart = new AddToCartObjects(driver);
 		CommonMethods.loginViaEmail();	
 		moveToElement(addcart.clothing);
 		Thread.sleep(2000);
 		addcart.dressAndJumpsuits.click();
-		addcart.maxi.click();
+		addcart.jumpsuits.click();
 		scrollBottom();
 		Thread.sleep(3000);
 		addcart.PLPTwo.click();
@@ -67,12 +65,11 @@ public class TestAddCart extends Globals {
 	@Test(priority = 1)
 
 		public void RemoveFromCart() throws Exception {
-			LoginPageobjects lgin = new LoginPageobjects(driver);
 			AddToCartObjects addcart = new AddToCartObjects(driver);
 			moveToElement(addcart.clothing);
 			Thread.sleep(2000);
 			addcart.dressAndJumpsuits.click();
-			addcart.maxi.click();
+			addcart.jumpsuits.click();
 			scrollBottom();
 			Thread.sleep(6000);
 			addcart.PLPTwo.click();	
@@ -109,13 +106,12 @@ public class TestAddCart extends Globals {
 	@Test(priority = 2)
 
 	public void AddToCart() throws Exception {
-		LoginPageobjects lgin = new LoginPageobjects(driver);
 		AddToCartObjects addcart = new AddToCartObjects(driver);
 		Thread.sleep(3000);
 		moveToElement(addcart.clothing);
 		Thread.sleep(2000);
 		addcart.dressAndJumpsuits.click();
-		addcart.maxi.click();
+		addcart.jumpsuits.click();
 		scrollBottom();
 		Thread.sleep(6000);
 		addcart.PLPTwo.click();
@@ -153,8 +149,6 @@ public class TestAddCart extends Globals {
 	@Test(priority = 3)
 
 	public void AddToCartQuickview() throws Exception {
-
-		LoginPageobjects lgin = new LoginPageobjects(driver);
 		AddToCartObjects addcart = new AddToCartObjects(driver);
 		QuickViewObjects quickview = new QuickViewObjects(driver);
 		moveToElement(addcart.clothing);
@@ -196,9 +190,9 @@ public class TestAddCart extends Globals {
 */			
 		
 }
-	/* @AfterTest
+	 @AfterTest
 	  public void closeBrowser() {	  
 	  	browserClose();
 	}
-	*/
+	
 }

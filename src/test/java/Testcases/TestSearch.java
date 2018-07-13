@@ -2,9 +2,7 @@ package Testcases;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
-
 import java.util.concurrent.TimeUnit;
-
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -38,16 +36,16 @@ public class TestSearch extends Globals{
 					System.out.println(msg);
 					String msg2= "Search results 'shorts' ";
 					System.out.println(msg2);
-					//Assert.assertTrue("Search results 'shorts' ".equalsIgnoreCase(msg));
+					//Assert.assertEquals(msg.compareToIgnoreCase(msg2));
 					//Assert.assertEquals(msg.equalsIgnoreCase("SEARCH RESULTS 'SHORTS'") );
 					//Assert.assertTrue(msg.equalsIgnoreCase(msg2));
 				//Assert.assertEquals("SEARCH RESULTS 'SHORTS'", msg );
 					//Assert.assertTrue(msg.equalsIgnoreCase(msg2));
-					
+					/*
 					  if ( msg.equalsIgnoreCase(msg2) )
 					   {
 					          System.out.println("search Result pass");
-					   } /*else {
+					   } else {
 						   System.out.println("search Result fail ");				
 						   }	*/				
 					
