@@ -23,7 +23,7 @@ public class LoginPageobjects extends Globals {
 	public WebElement checkbtn;
 	
 	@FindBy(xpath =".//span[@class='user-icon-inner']")
-	public WebElement loginIcon;
+	public WebElement loginIcon; 
 
 	@FindBy(xpath ="//*[@id='mini-cart-header']/span[1]")
 	public WebElement loginButton;

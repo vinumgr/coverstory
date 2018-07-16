@@ -58,6 +58,7 @@ public class AccountPage extends Globals{
 	public WebElement signOut;
 	
 	@FindBy(xpath="//*[contains(text(),'No, keep me signed in')]")
+	//@FindBy(xpath="//*[@id='page']/div[1]/div/div[1]/a[1]")
 	public WebElement keepMeSignedIn;
 	
 	@FindBy(xpath="//*[contains(text(),'yes, sign me out')]")

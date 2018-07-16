@@ -22,8 +22,11 @@ public class SearchPage extends Globals{
 		@FindBy(xpath="//*[contains(@id, 'search_submit_btn')]")
 		public WebElement searchButton;
 		
-		@FindBy(xpath="//*[@id='content']/div[2]/div/div[2]/div[2]/div/div[1]/h1")
+		@FindBy(xpath="//h1[@class='e_catalogtitle']")
 		public WebElement searchResult;
+		
+		@FindBy(xpath="//h1[@class='e_catalogtitle']")
+		public WebElement searchResultTwo;
 		
 		//Banner object
 		@FindBy(xpath="//*[contains(@class, 'owl-dot active')]")

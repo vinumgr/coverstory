@@ -22,20 +22,16 @@ public class Constants {
 	*/
 	
 	//Objects xpath
-	/*public static String AddtoBagSize_PLP = ".//*[@id='productsCatalog']/li[2]/div/div[2]/div[4]/div/div/div/div[3]/div/span[2]";
-	public static String ViewBagButton = ".//*[@class='btn-view-cart']";
-	public static String CreditCard_Tab = ".//*[@id='payment-form']/div[1]/div/ul/li[1]/a";
-	public static String OrderNo = ".//*[@id='content']/div[2]/div[2]/div[1]/div[2]/p/span[1]";
-	public static String clickWomens = ".//*[@id='main-menu']/ul/li[2]/div[1]/a/span";
-	public static String CardName = ".//*[@id='cc_holder']";
-	public static String saveforLaterPopUp = ".//*[@id='page']/header/div/div/div/div[3]/div[4]";
-	public static String addToBagSize = ".//*[@id='productsCatalog']/li/div/div/div[3]/div/div[3]/span[2]";
-	public static String addToBagPopupMsg = ".//*[@id='page']/header/div/div/div/div[3]/div[4]/div[2]/p";
-	public static String deleteProductMsg = ".//*[@id='page']/header/div/div/div/div[3]/div[4]";
-	public static String PLPimage = ".//*[@id='productsCatalog']/li[2]/div/div[2]/a";
-	public static String ProceedtoPayment_Button = ".//*[@id='checkoutBtn']";
-	
-	public static String QuickViewproduct_size = "//div[@class='size-left']/span[@data-js-variant='DJ006WJ27ACUINFUR-259' and  @class='sizebox2 sizeboxtext']";
-	
-	*/
+	public static String loginIcon = ".//span[@class='user-icon-inner']";
+	public static String signInButton = "//*[@id='stepOneSubmit']";
+	public static String signOutButton = "//li[@class='signout-afterlogin']//a[contains(@class,'sel-logout')][contains(text(),'Sign Out')]";
+	public static String loginInputId = "//*[@id='loginInput']";
+	public static String signinGooglePlus = "//button[@type='button'][contains(text(),'Sign in with Gplus')]";
+	public static String signinFacebook = "//button[@type='button'][contains(text(),'Sign in with Facebook')]";
+	public static String facebookLoginButton = "//button[@id='loginbutton']";
+	public static String facebookEmailAndPhone = "/html[1]/body[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/form[1]/div[1]/div[1]/input[1]";
+	public static String MyAccount = "//*[@id='page']/header/div/div/div/div[4]/div/div[3]/div/ul/li[3]/a";
+	public static String editProfileButton = "//*[@id='CProEditButton']";
+	public static String saveProfileButton = "//*[@id='CProSaveButton']";
+
 }
