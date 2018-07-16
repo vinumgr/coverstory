@@ -829,6 +829,10 @@ public class Globals {
 
 		return frameworkBrowserName;
 	}
+	
+	public boolean elementHasClass(WebElement element, String disabled) {
+		return element.getAttribute("class").contains(disabled);
+	}
 
 	/**
 	 * @author Charan browserSelectGrid. Presents capabilities to select browser

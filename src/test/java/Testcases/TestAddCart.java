@@ -17,13 +17,12 @@ public class TestAddCart extends Globals {
 		setUp();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		browserNav(QA_CoverStoryURL);
-	}	
-	//Add to cart and remove from minicart
-	@Test(priority = 0)
-	
+	}
+
 	public void RemoveFromMinicart() throws Exception {
+		boolean outOfStock = false;
 		AddToCartObjects addcart = new AddToCartObjects(driver);
-		CommonMethods.loginViaEmail();	
+		CommonMethods.loginViaEmail();
 		moveToElement(addcart.clothing);
 		Thread.sleep(2000);
 		addcart.dressAndJumpsuits.click();
@@ -31,48 +30,50 @@ public class TestAddCart extends Globals {
 		scrollBottom();
 		Thread.sleep(3000);
 		addcart.PLPTwo.click();
-		
-		if (addcart.selectSizeXS.isEnabled()) {
+
+		if (elementHasClass(addcart.selectSizeXS, "disabled")) {
 			addcart.selectSizeXS.click();
-		    System.out.println("Extra Small size is selected");
-		    
-		} else if (addcart.selectSizeS.isEnabled()) {
+			System.out.println("Extra Small size is selected");
+
+		} else if (elementHasClass(addcart.selectSizeS, "disabled")) {
 			addcart.selectSizeS.click();
 			System.out.println("Small size is selected");
-			
-		} else if (addcart.selectSizeM.isEnabled()) {
+
+		} else if (elementHasClass(addcart.selectSizeM, "disabled")) {
 			addcart.selectSizeM.click();
 			System.out.println("Medium size is selected");
-			
-		} else if (addcart.selectSizeL.isEnabled()) {
+
+		} else if (elementHasClass(addcart.selectSizeL, "disabled")) {
 			addcart.selectSizeL.click();
 			System.out.println("Large size is selected");
-			
+
 		} else {
 			System.out.println("Product is Out of stock");
-			
-		}	
-		Thread.sleep(3000);
-		addcart.addTocartButton.click();
-		Thread.sleep(3000);
-		addcart.cartIcon_PDP.click();
-		Thread.sleep(3000);		
-		addcart.removeFromMiniCartSymbol.click();
-		addcart.removeFromMiniCartButton.click();	
+			outOfStock = true;
+		}
+		if (!outOfStock) {
+			Thread.sleep(3000);
+			addcart.addTocartButton.click();
+			Thread.sleep(3000);
+			addcart.cartIcon_PDP.click();
+			Thread.sleep(3000);
+			addcart.removeFromMiniCartSymbol.click();
+			addcart.removeFromMiniCartButton.click();
+		}
 	}
-	
-	//Add to cart and Remove from main cart
+
+	// Add to cart and Remove from main cart
 	@Test(priority = 1)
 
-		public void RemoveFromCart() throws Exception {
-			AddToCartObjects addcart = new AddToCartObjects(driver);
-			moveToElement(addcart.clothing);
-			Thread.sleep(2000);
-			addcart.dressAndJumpsuits.click();
-			addcart.jumpsuits.click();
-			scrollBottom();
-			Thread.sleep(6000);
-			addcart.PLPTwo.click();	
+	public void RemoveFromCart() throws Exception {
+		AddToCartObjects addcart = new AddToCartObjects(driver);
+		moveToElement(addcart.clothing);
+		Thread.sleep(2000);
+		addcart.dressAndJumpsuits.click();
+		addcart.jumpsuits.click();
+		scrollBottom();
+		Thread.sleep(6000);
+		addcart.PLPTwo.click();
 		if (addcart.selectSizeXS.isEnabled()) {
 			addcart.selectSizeXS.click();
 			System.out.println("Extra Small size is selected");
@@ -80,29 +81,30 @@ public class TestAddCart extends Globals {
 		} else if (addcart.selectSizeS.isEnabled()) {
 			addcart.selectSizeS.click();
 			System.out.println("Small size is selected");
-			
+
 		} else if (addcart.selectSizeM.isEnabled()) {
 			addcart.selectSizeM.click();
 			System.out.println("Medium size is selected");
-			
+
 		} else if (addcart.selectSizeL.isEnabled()) {
 			addcart.selectSizeL.click();
 			System.out.println("Large size is selected");
-			
+
 		} else {
 			System.out.println("Product is Out of stock");
-			
+
 		}
 		Thread.sleep(3000);
 		addcart.addTocartButton.click();
 		Thread.sleep(3000);
 		addcart.cartIcon_PDP.click();
-		Thread.sleep(3000);		
+		Thread.sleep(3000);
 		addcart.viewCartButton_PDP.click();
 		addcart.removeFromCartSymbol.click();
 		addcart.removeFromCartButton.click();
 	}
-	//Add to cart
+
+	// Add to cart
 	@Test(priority = 2)
 
 	public void AddToCart() throws Exception {
@@ -116,35 +118,36 @@ public class TestAddCart extends Globals {
 		Thread.sleep(6000);
 		addcart.PLPTwo.click();
 		Thread.sleep(6000);
-	
-	if (addcart.selectSizeXS.isEnabled()) {
-		addcart.selectSizeXS.click();
-		System.out.println("Extra Small size is selected");
 
-	} else if (addcart.selectSizeS.isEnabled()) {
-		addcart.selectSizeS.click();
-		System.out.println("Small size is selected");
-		
-	} else if (addcart.selectSizeM.isEnabled()) {
-		addcart.selectSizeM.click();
-		System.out.println("Medium size is selected");
-		
-	} else if (addcart.selectSizeL.isEnabled()) {
-		addcart.selectSizeL.click();
-		System.out.println("Large size is selected");
-		
-	} else {
-		System.out.println("Product is Out of stock");
-		
+		if (addcart.selectSizeXS.isEnabled()) {
+			addcart.selectSizeXS.click();
+			System.out.println("Extra Small size is selected");
+
+		} else if (addcart.selectSizeS.isEnabled()) {
+			addcart.selectSizeS.click();
+			System.out.println("Small size is selected");
+
+		} else if (addcart.selectSizeM.isEnabled()) {
+			addcart.selectSizeM.click();
+			System.out.println("Medium size is selected");
+
+		} else if (addcart.selectSizeL.isEnabled()) {
+			addcart.selectSizeL.click();
+			System.out.println("Large size is selected");
+
+		} else {
+			System.out.println("Product is Out of stock");
+
+		}
+		Thread.sleep(3000);
+		addcart.addTocartButton.click();
+		Thread.sleep(6000);
+		addcart.cartIcon_PDP.click();
+		Thread.sleep(3000);
+		addcart.viewCartButton_PDP.click();
+		// captureScreen();
 	}
-	Thread.sleep(3000);
-	addcart.addTocartButton.click();
-	Thread.sleep(6000);
-	addcart.cartIcon_PDP.click();
-	Thread.sleep(3000);	
-	addcart.viewCartButton_PDP.click();
-	//captureScreen();	
-	}
+
 	// Quick view Add to cart
 	@Test(priority = 3)
 
@@ -157,7 +160,7 @@ public class TestAddCart extends Globals {
 		Thread.sleep(1000);
 		moveToElement(quickview.quickviewPLP);
 		Thread.sleep(3000);
-		quickview.quickviewIcon.click();	
+		quickview.quickviewIcon.click();
 		Thread.sleep(5000);
 		if (addcart.selectSizeXS.isEnabled()) {
 			addcart.selectSizeXS.click();
@@ -166,33 +169,32 @@ public class TestAddCart extends Globals {
 		} else if (addcart.selectSizeS.isEnabled()) {
 			addcart.selectSizeS.click();
 			System.out.println("Small size is selected");
-			
+
 		} else if (addcart.selectSizeM.isEnabled()) {
 			addcart.selectSizeM.click();
 			System.out.println("Medium size is selected");
-			
+
 		} else if (addcart.selectSizeL.isEnabled()) {
 			addcart.selectSizeL.click();
 			System.out.println("Large size is selected");
-			
+
 		} else {
 			System.out.println("Product is Out of stock");
-			
 		}
 		Thread.sleep(3000);
 		quickview.quickviewAddToCart.click();
-		//quickview.quickviewclose.click();		
-		//View Cart
-	/*	addcart.cartIcon_PDP.click();
-		Thread.sleep(3000);		
-		addcart.viewCartButton_PDP.click();
-		//captureScreen();
-*/			
-		
-}
-	 @AfterTest
-	  public void closeBrowser() {	  
-	  	browserClose();
+		// quickview.quickviewclose.click();
+		// View Cart
+		/*
+		 * addcart.cartIcon_PDP.click(); Thread.sleep(3000);
+		 * addcart.viewCartButton_PDP.click(); //captureScreen();
+		 */
+
 	}
-	
+
+	@AfterTest
+	public void closeBrowser() {
+		browserClose();
+	}
+
 }
