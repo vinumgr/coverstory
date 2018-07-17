@@ -45,8 +45,12 @@ public class TestAccount extends Globals {
 				WebDriverExplicitWait(driver, 10, "Xpath", Constants.editProfileButton);
 				account.editProfileButton.click();
 				Reporter.log("Account : editProfileButton button clicked", true);
-				//account.firstNameBox.sendKeys(Excelutility.excelData(6, 0, 0));
-				//account.lastNameBox.sendKeys(Excelutility.excelData(6, 1, 0));
+				account.firstNameBox.clear();
+				account.firstNameBox.sendKeys("FirstNameEdited");
+				Reporter.log("First name successfully edited",true);
+				account.lastNameBox.clear();
+				account.lastNameBox.sendKeys("Lastnameedited");
+				Reporter.log("Last name successfully edited",true);
 				WebDriverExplicitWait(driver, 10, "Xpath", Constants.saveProfileButton);
 				account.saveProfileButton.click();
 				Reporter.log("Account : saveProfileButton button clicked", true);

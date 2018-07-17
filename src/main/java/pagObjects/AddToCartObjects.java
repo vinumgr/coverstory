@@ -28,10 +28,10 @@ public class AddToCartObjects extends Globals {
 	@FindBy(xpath="//a[@id='jumpsuit']")
 	public WebElement jumpsuits;
 	
-	@FindBy(xpath="//a[@id='maxi']")
+	@FindBy(xpath="//*[@id='maxi']")
 	public WebElement maxi;
 	
-	@FindBy(xpath="//*[@id='productsCatalog']/li[3]/div/div[2]/a/img")
+	@FindBy(xpath="//*[@id='productsCatalog']/li[2]/div/div[2]/a ")
 	public WebElement PLP;	
 	
 	/*@FindBy(xpath="//div[starts-with(@class, 'product-')]")
@@ -41,18 +41,23 @@ public class AddToCartObjects extends Globals {
 	public WebElement PLPTwo;
 	
 	@FindBy(xpath="//span[contains(text(),'XS')]")
+	//@FindBy(xpath="//*[@id='pdp_productdetail']/div[2]/div[1]/div[2]/span[1]")
 	public WebElement selectSizeXS;
 	
-	@FindBy(xpath="//span[contains(text(),'S')]")
+	//@FindBy(xpath="//span[contains(text(),'S')]")
+	@FindBy(xpath="//*[@id='pdp_productdetail']/div[2]/div[1]/div[2]/span[2]")
 	public WebElement selectSizeS;
 	
-	@FindBy(xpath="//span[contains(text(),'M')]")
+	//@FindBy(xpath="//span[contains(text(),'M')]")	
+	@FindBy(xpath="//*[@id='pdp_productdetail']/div[2]/div[1]/div[2]/span[3]")
 	public WebElement selectSizeM;
 	
-	@FindBy(xpath="//span[contains(text(),'L')]")
+	//@FindBy(xpath="//span[contains(text(),'L')]")
+	@FindBy(xpath="//*[@id='pdp_productdetail']/div[2]/div[1]/div[2]/span[4]")
 	public WebElement selectSizeL;
 	
-	@FindBy(xpath="//span[contains(text(),'XL')]")
+	//@FindBy(xpath="//span[contains(text(),'XL')]")
+	@FindBy(xpath="//*[@id='pdp_productdetail']/div[2]/div[1]/div[2]/span[5]")
 	public WebElement selectSizeXL;
 	
 	@FindBy(xpath="//a[@id='midi']")
@@ -74,7 +79,7 @@ public class AddToCartObjects extends Globals {
 	@FindBy(xpath="//button[@id='pdp-add-tocart-btn']")
 	public WebElement addTocartButton;
 	
-	@FindBy(xpath="//*[@id=\"page\"]/header/div/div/div/div[4]/div/div[1]/div[1]")
+	@FindBy(xpath="//span[@class='shopping_bag']")
 	public WebElement cartIcon_PDP;
 
 	@FindBy(xpath="//*[@id=\"mini-cart-drobdwon\"]/div[4]/div[4]/div[1]/a")
@@ -86,7 +91,7 @@ public class AddToCartObjects extends Globals {
 	@FindBy(xpath="//button[@class='btn remove-item cart-pop-btn']")
 	public WebElement removeFromMiniCartButton;
 	
-	@FindBy(xpath="//*[@id=\"items_overlay_1\"]/div[6]/a[1]")
+	@FindBy(xpath="//*[@id='items_overlay_1']/div[6]/a[1]")
 	public WebElement removeFromCartSymbol;
 	
 	@FindBy(xpath="//button[@class='btn remove-item cart-pop-btn']")

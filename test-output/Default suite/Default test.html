@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>4/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Jul 16 19:25:25 IST 2018</td>
+<td>Started on:</td><td>Tue Jul 17 20:03:06 IST 2018</td>
 </tr>
-<tr><td>Total time:</td><td>138 seconds (138298 ms)</td>
+<tr><td>Total time:</td><td>41 seconds (41005 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,26 +75,24 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Testcases.TestAccount.MyAccountSignOutPage()'><b>MyAccountSignOutPage</b><br>Test class: Testcases.TestAccount<br/>
-<a href="#Output-1506648430" onClick='toggleBox("Output-1506648430", this, "Show output", "Hide output");'>Show output</a>
+<td title='Testcases.TestAddWishlist.AddToWishlistQuickview()'><b>AddToWishlistQuickview</b><br>Test class: Testcases.TestAddWishlist<br/>
+<a href="#Output-142099757" onClick='toggleBox("Output-142099757", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1506648430" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1506648430">
-Account : signOut button clicked<br/>
-Account : signOut button clicked<br/>
+<a href="#Output-142099757" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-142099757">
+Item added to wishlist from quickview<br/>
+Login successful<br/>
 </div>
 </td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[contains(text(),&apos;yes, sign me out&apos;)]&quot;}
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: Element &lt;span class=&quot;user-icon-inner&quot;&gt;&lt;/span&gt; is not clickable at point (1099, 46). Other element would receive the click: &lt;div id=&quot;uiDialogBody&quot; class=&quot;container&quot;&gt;...&lt;/div&gt;
   (Session info: chrome=67.0.3396.99)
   (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.13.0&apos;, revision: &apos;2f0d292&apos;, time: &apos;2018-06-25T15:24:21.231Z&apos;
 System info: host: &apos;EMB-BAN-168&apos;, ip: &apos;10.99.90.140&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_171&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.40.565498 (ea082db3280dd6..., userDataDir: C:\Users\EMB-VI~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 67.0.3396.99, webStorageEnabled: true}
-Session ID: 00c9f8881c6180bcdd6e18baa2f80421
-*** Element info: {Using=xpath, value=//*[contains(text(),&apos;yes, sign me out&apos;)]}
+Session ID: a515b074a0ab03444392457f75267053
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -107,14 +105,15 @@ Session ID: 00c9f8881c6180bcdd6e18baa2f80421
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy9.click(Unknown Source)
-	at Testcases.TestAccount.MyAccountSignOutPage(TestAccount.java:133)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy8.click(Unknown Source)
+	at Testcases.TestAddWishlist.AddToWishlistQuickview(TestAddWishlist.java:59)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -140,18 +139,16 @@ Session ID: 00c9f8881c6180bcdd6e18baa2f80421
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1506648430", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1506648430'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[contains(text(),&apos;yes, sign me out&apos;)]&quot;}
+</pre></div><a href='#' onClick='toggleBox("stack-trace142099757", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace142099757'><pre>org.openqa.selenium.WebDriverException: unknown error: Element &lt;span class=&quot;user-icon-inner&quot;&gt;&lt;/span&gt; is not clickable at point (1099, 46). Other element would receive the click: &lt;div id=&quot;uiDialogBody&quot; class=&quot;container&quot;&gt;...&lt;/div&gt;
   (Session info: chrome=67.0.3396.99)
   (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.13.0&apos;, revision: &apos;2f0d292&apos;, time: &apos;2018-06-25T15:24:21.231Z&apos;
 System info: host: &apos;EMB-BAN-168&apos;, ip: &apos;10.99.90.140&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_171&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.40.565498 (ea082db3280dd6..., userDataDir: C:\Users\EMB-VI~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 67.0.3396.99, webStorageEnabled: true}
-Session ID: 00c9f8881c6180bcdd6e18baa2f80421
-*** Element info: {Using=xpath, value=//*[contains(text(),&apos;yes, sign me out&apos;)]}
+Session ID: a515b074a0ab03444392457f75267053
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -164,14 +161,15 @@ Session ID: 00c9f8881c6180bcdd6e18baa2f80421
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy9.click(Unknown Source)
-	at Testcases.TestAccount.MyAccountSignOutPage(TestAccount.java:133)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy8.click(Unknown Source)
+	at Testcases.TestAddWishlist.AddToWishlistQuickview(TestAddWishlist.java:59)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -198,72 +196,8 @@ Session ID: 00c9f8881c6180bcdd6e18baa2f80421
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>31</td>
-<td>Testcases.TestAccount@b3d7190</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='Testcases.TestAccount.MyAccountChangePassword()'><b>MyAccountChangePassword</b><br>Test class: Testcases.TestAccount<br/>
-<a href="#Output-1774795940" onClick='toggleBox("Output-1774795940", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1774795940" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1774795940">
-Account : changeAccountPasswordButton button clicked<br/>
-Account : newPasswordBox button clicked<br/>
-Account : confirmPasswordBox button clicked<br/>
-Account : savePasswordButton button clicked<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>Testcases.TestAccount@b3d7190</td></tr>
-<tr>
-<td title='Testcases.TestAccount.MyAccountInfo()'><b>MyAccountInfo</b><br>Test class: Testcases.TestAccount<br/>
-<a href="#Output-1107772887" onClick='toggleBox("Output-1107772887", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1107772887" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1107772887">
-Account : loginIcon button clicked<br/>
-Account : MyAccount button clicked<br/>
-Account : editProfileButton button clicked<br/>
-Account : saveProfileButton button clicked<br/>
-</div>
-</td>
-<td></td>
-<td>15</td>
-<td>Testcases.TestAccount@b3d7190</td></tr>
-<tr>
-<td title='Testcases.TestAccount.MyAccountOrderPage()'><b>MyAccountOrderPage</b><br>Test class: Testcases.TestAccount</td>
-<td></td>
-<td>1</td>
-<td>Testcases.TestAccount@b3d7190</td></tr>
-<tr>
-<td title='Testcases.TestAccount.MyAccountSaveAddressPage()'><b>MyAccountSaveAddressPage</b><br>Test class: Testcases.TestAccount<br/>
-<a href="#Output-1488352537" onClick='toggleBox("Output-1488352537", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1488352537" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1488352537">
-Account : mySavedAddress button clicked<br/>
-Account : openAddNewAddress button clicked<br/>
-Account : firstNameAddNewAddress button clicked<br/>
-Account : LastNameAddNewAddress button clicked<br/>
-Account : pincodeAddNewAddress button clicked<br/>
-Account : address1AddNewAddress button clicked<br/>
-Account : phoneAddNewAddress button clicked<br/>
-Account : saveAddressInAddNewAddress button clicked<br/>
-Account : deleteAddress button clicked<br/>
-Account : deleteAddressconfirm button clicked<br/>
-</div>
-</td>
-<td></td>
-<td>8</td>
-<td>Testcases.TestAccount@b3d7190</td></tr>
+<td>12</td>
+<td>Testcases.TestAddWishlist@fe18270</td></tr>
 </table><p>
 </body>
 </html>

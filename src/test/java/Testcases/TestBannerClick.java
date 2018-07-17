@@ -2,6 +2,8 @@ package Testcases;
 
 import java.util.concurrent.TimeUnit;
 
+import org.testng.Reporter;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -33,5 +35,26 @@ public class TestBannerClick extends Globals {
 					//Thread.sleep(10000);
 					search.bannerSlider.click();
 					search.bannerOne.click();
+					Reporter.log("Banner clicked without Login",true);
 		}
+		//Banner click in home page
+				@Test(priority = 1)
+
+				public void BannerclickWithLogin() throws Exception {
+					LoginPageobjects lgin = new LoginPageobjects(driver);
+					AccountPage account = new AccountPage(driver);
+					SearchPage search = new SearchPage(driver);
+					//Login with email
+							CommonMethods.loginViaEmail();	
+							Thread.sleep(10000);
+							search.bannerSlider.click();
+							search.bannerOne.click();
+							Reporter.log("Banner click with Login",true);
+				}
+				// Closing the Browser:
+				@AfterTest
+				public void closeBrowser() {
+					browserClose();
+				}
+
 }
