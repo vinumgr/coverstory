@@ -37,7 +37,9 @@ public class LoginPageobjects extends Globals {
 	@FindBy(xpath ="//*[@id='stepOneSubmit']")
 	public WebElement signInButton;
 	
-	@FindBy(xpath ="//*[@id='page']/header/div/div/div/div[4]/div/div[3]/div/ul/li[6]/a")
+	@FindBy(xpath ="//*[@id='page']/header/div/div/div/div[4]/div/div[3]/div/ul/li[6]")
+	//@FindBy(xpath ="//*[@title, 'Logout']//*[@class='sel-logout ']")
+	//@FindBy(xpath ="//a[contains(@title, 'Logout') and contains(@rel, 'nofollow')]")
 	public WebElement signOutButton;
 	
 	

@@ -5,18 +5,22 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import DataUtilities.Excelutility;
 import globals.CommonMethods;
+import globals.Constants;
 import globals.Globals;
 import pagObjects.AddToCartObjects;
 import pagObjects.LoginPageobjects;
 import pagObjects.OrderObjects;
 
 public class TestPlaceOrder extends Globals{
-	@BeforeTest
+	@BeforeMethod
 	public void launchUrl() throws Exception {
 		System.setProperty("browser", "Chrome");
 		setUp();
@@ -28,15 +32,15 @@ public class TestPlaceOrder extends Globals{
 	
 	public void OrderPlace() throws Exception {
 		LoginPageobjects lgin = new LoginPageobjects(driver);
-		AddToCartObjects addcart = new AddToCartObjects(driver);
 		TestAddCart cart = new TestAddCart();
 		OrderObjects order = new OrderObjects(driver);
 		CommonMethods.loginViaEmail();	
-		addcart.cartIcon_PDP.click();
+		Thread.sleep(7000);	
+		/*addcart.cartIcon_PDP.click();
 		Thread.sleep(3000);		
-		addcart.removeFromMiniCartSymbol.click();
-		addcart.removeFromMiniCartButton.click();	
-		cart.AddToCart();		
+		//addcart.removeFromMiniCartSymbol.click();
+		//addcart.removeFromMiniCartButton.click();	
+*/		cart.AddToCart();		
 		lgin.pncode.sendKeys(Excelutility.excelData(2, 2, 0));	
 		Thread.sleep(2000);
 		lgin.checkbtn.click();
@@ -52,6 +56,8 @@ public class TestPlaceOrder extends Globals{
 		order.iciciBank.click();
 		Thread.sleep(3000);
 		order.completePayment.click();
+		
+		driver.close();
 		
 		/*// Store all the elements of the same category in the list of WebLements.
 				List<WebElement> list = driver.findElements(By.xpath("//*[@id='payment-form']/div[1]/div/div[1]/div[4]/div/div[1]/div/ul/li[1]/div"));
@@ -88,7 +94,7 @@ public void OrderPlaceCheckout() throws Exception {
 	Thread.sleep(3000);		
 	addcart.removeFromMiniCartSymbol.click();
 	addcart.removeFromMiniCartButton.click();	*/
-	cart.AddToCart();		
+	cart.AddToCartQuickview();		
 	lgin.pncode.sendKeys(Excelutility.excelData(2, 2, 0));	
 	Thread.sleep(2000);
 	lgin.checkbtn.click();
@@ -133,5 +139,8 @@ public void OrderPlaceCheckout() throws Exception {
 				list.get(0).click();
 			}*/
 		}
-
+@AfterMethod
+public void closeBrowser() {
+	browserClose();
+}
 }

@@ -3,12 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Testcases.TestAddWishlist">
+      <class name="Testcases.TestPlaceOrder">
         <methods>
-          <include name="AddToWishlistQuickview"/>
-          <include name="launchURL"/>
+          <include name="closeBrowser"/>
+          <include name="OrderPlaceCheckout"/>
+          <include name="launchUrl"/>
         </methods>
-      </class> <!-- Testcases.TestAddWishlist -->
+      </class> <!-- Testcases.TestPlaceOrder -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

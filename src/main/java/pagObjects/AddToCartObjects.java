@@ -17,6 +17,7 @@ public class AddToCartObjects extends Globals {
 	//Define the page Objects
 	
 	@FindBy(xpath="//span[contains(text(),'Clothing')]")
+	//@FindBy(xpath="//*[@id='main-menu']/ul/li[1]/div[1]/a[1]/span")
 	public WebElement clothing;
 	
 	@FindBy(xpath="//h3[@class='widgettitle'][contains(text(),'All New')]")
@@ -34,14 +35,17 @@ public class AddToCartObjects extends Globals {
 	@FindBy(xpath="//*[@id='productsCatalog']/li[2]/div/div[2]/a ")
 	public WebElement PLP;	
 	
+	@FindBy(xpath="//*[@id='plus']/i")
+	public WebElement increaseItem;	
+	
 	/*@FindBy(xpath="//div[starts-with(@class, 'product-')]")
 	public WebElement PLPTwo;*/
 	
 	@FindBy(xpath="//*[@id='productsCatalog']/li[1]/div/div[2]/a")
 	public WebElement PLPTwo;
 	
-	@FindBy(xpath="//span[contains(text(),'XS')]")
-	//@FindBy(xpath="//*[@id='pdp_productdetail']/div[2]/div[1]/div[2]/span[1]")
+	//@FindBy(xpath="//span[contains(text(),'XS')]")
+	@FindBy(xpath="//*[@id='pdp_productdetail']/div[2]/div[1]/div[2]/span[1]")
 	public WebElement selectSizeXS;
 	
 	//@FindBy(xpath="//span[contains(text(),'S')]")
@@ -79,7 +83,7 @@ public class AddToCartObjects extends Globals {
 	@FindBy(xpath="//button[@id='pdp-add-tocart-btn']")
 	public WebElement addTocartButton;
 	
-	@FindBy(xpath="//span[@class='shopping_bag']")
+	@FindBy(xpath="//*[@id='page']/header/div/div/div/div[4]/div/div[1]/div[1]")
 	public WebElement cartIcon_PDP;
 
 	@FindBy(xpath="//*[@id=\"mini-cart-drobdwon\"]/div[4]/div[4]/div[1]/a")

@@ -2,6 +2,13 @@ package Testcases;
 
 import globals.Constants;
 import globals.Globals;
+
+import static org.testng.Assert.assertTrue;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
@@ -9,6 +16,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import DataUtilities.Excelutility;
+import pagObjects.AccountPage;
 import pagObjects.LoginPageobjects;
 
 public class TestCswLogin extends Globals {
@@ -28,6 +36,7 @@ public class TestCswLogin extends Globals {
 	public void coverStoryEmailLogin() throws Exception {
 
 		LoginPageobjects lgin = new LoginPageobjects(driver);
+		AccountPage account = new AccountPage(driver);
 		//Thread.sleep(10000);
 		WebDriverExplicitWait(driver, 10, "Xpath", Constants.loginIcon);
 		lgin.loginIcon.click();
@@ -43,17 +52,38 @@ public class TestCswLogin extends Globals {
 		//Thread.sleep(1000);
 		WebDriverExplicitWait(driver, 10, "Xpath", Constants.signInButton);
 		lgin.signInButton.click();
-		Reporter.log("Email :SignIn using email number is successful", true);
+		Reporter.log("Email :SignIn using email is successful", true);
 		Thread.sleep(1000);
 		//WebDriverExplicitWait(driver, 10, "Xpath", Constants.loginIcon);
 		lgin.loginIcon.click();
 		Reporter.log("Email :Login Icon clicked", true);
+		//Assert.assertEquals("Sign Out", lgin.signOutButton.getText(),"Text not matched | ");
+		//assertTrue("Sign Out".trim().equals(lgin.signOutButton.getText()));
+		
+		Actions action = new Actions(driver);
+		action.moveToElement(lgin.signOutButton).build().perform();
+		WebElement toolTipElement = driver.findElement(By.xpath("//*[@id='page']/header/div/div/div/div[4]/div/div[3]/div/ul/li[6]"));
+		// To get the tool tip text and assert
+		String toolTipText = toolTipElement.getText();
+		Assert.assertEquals("Sign Out", toolTipText);
+		Reporter.log("Login success",true);
+		
+		
+	   // Reporter.log("Email : Login Success ", true);
 		//Thread.sleep(2000);
 		WebDriverExplicitWait(driver, 20, "Xpath", Constants.signOutButton);
+		
+		//int var_ele_size= driver.findElements(By.xpath("//a[contains(text(),'Sign Out')]")).size();
+		//driver.findElements(By.xpath("//a[contains(text(),'Sign Out')]")).get(var_ele_size-1).click();
 		lgin.signOutButton.click();
-		Reporter.log("Email :signout using Email number is successful", true);
-		//assertEquals(lgin.userName.getText(),Excelutility.excelData(2, 0, 0));
-		//Reporter.log("Search result for jeans success with login", true);
+		Assert.assertEquals("Sign In / Sign Up", lgin.signInButton.getText(),"Text not matched | ");
+		
+		
+		//Reporter.log("Email :signout using Email number is successful", true);
+		//System.out.println(lgin.signOutButton.getText());
+		//assertTrue("Search results 'shorts' ".trim().equalsIgnoreCase(search.searchResult.getText()));
+		//Assert.assertEquals(arg0, arg1);
+		//Reporter.log("Search result for shorts success with login", true);
 	// captureScreen();
 
 	}
@@ -89,6 +119,8 @@ public class TestCswLogin extends Globals {
 		Reporter.log("Phone :Login Icon clicked", true);
 		//Thread.sleep(2000);
 		WebDriverExplicitWait(driver, 10, "Xpath", Constants.signOutButton);
+		//int var_ele_size= driver.findElements(By.xpath("//a[contains(text(),'Sign Out')]")).size();
+		//driver.findElements(By.xpath("//a[contains(text(),'Sign Out')]")).get(var_ele_size-1).click();
 		lgin.signOutButton.click();
 		Reporter.log("Phone :signout using phone number is successful", true);
 		// assertEquals(lgin.userName.getText(),Excelutility.excelData(2, 0, 0));
@@ -133,6 +165,8 @@ public class TestCswLogin extends Globals {
 		Reporter.log("GooglePlus :loginIcon button clicked", true);
 		//Thread.sleep(2000);
 		WebDriverExplicitWait(driver, 10, "Xpath", Constants.signOutButton);
+		//int var_ele_size= driver.findElements(By.xpath("//a[contains(text(),'Sign Out')]")).size();
+		//driver.findElements(By.xpath("//a[contains(text(),'Sign Out')]")).get(var_ele_size-1).click();
 		lgin.signOutButton.click();
 		Reporter.log("GooglePlus :signOutButton button clicked", true);
 		// assertEquals(lgin.userName.getText(),Excelutility.excelData(2, 0, 0));
@@ -154,7 +188,7 @@ public class TestCswLogin extends Globals {
 		WebDriverExplicitWait(driver, 10, "Xpath", Constants.signinFacebook);
 		lgin.signinFacebook.click();
 		Reporter.log("Facebook : signinFacebook button clicked", true);
-		Thread.sleep(15000);
+		Thread.sleep(5000);
 		//WebDriverExplicitWait(driver, 10, "Xpath", Constants.facebookEmailAndPhone);
 		switchToLatestTabOrWindow();
 		log(Excelutility.excelData(5, 0, 0));
@@ -180,7 +214,9 @@ public class TestCswLogin extends Globals {
 		Reporter.log("Facebook :loginIcon button clicked", true);
 		//Thread.sleep(2000);
 		WebDriverExplicitWait(driver, 10, "Xpath", Constants.signOutButton);
-		lgin.signOutButton.click();
+		int var_ele_size= driver.findElements(By.xpath("//a[contains(text(),'Sign Out')]")).size();
+		driver.findElements(By.xpath("//a[contains(text(),'Sign Out')]")).get(var_ele_size-1).click();
+		//lgin.signOutButton.click();
 		Reporter.log("Facebook :signOutButton button clicked", true);
 
 		// assertEquals(lgin.userName.getText(),Excelutility.excelData(2, 0, 0));

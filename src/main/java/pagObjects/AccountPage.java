@@ -16,6 +16,7 @@ public class AccountPage extends Globals{
 	//Define the page Objects
 	
 	@FindBy(xpath="//*[@id='page']/header/div/div/div/div[4]/div/div[3]/div/ul/li[3]/a")
+	//@FindBy(xpath="")
 	public WebElement MyAccount;
 	
 	@FindBy(xpath="//*[@id='CProEditButton']")

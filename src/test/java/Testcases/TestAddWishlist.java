@@ -52,33 +52,17 @@ public class TestAddWishlist extends Globals{
 		lgin.signInButton.click();
 		Reporter.log("Login successful",true);
 		Thread.sleep(1000);
-		WebDriverExplicitWait(driver, 10, "Xpath", Constants.quickviewclose);
+		//WebDriverExplicitWait(driver, 10, "Xpath", Constants.quickviewclose);
+		quickview.quickAddToWishlist.click();
 		quickview.quickviewclose.click();
-		//Thread.sleep(10000);
-		WebDriverExplicitWait(driver, 10, "Xpath", Constants.loginIcon);
+		Thread.sleep(10000);
+		//WebDriverExplicitWait(driver, 10, "Xpath", Constants.loginIcon);
 		lgin.loginIcon.click();
 		//Thread.sleep(10000);
 		WebDriverExplicitWait(driver, 10, "Xpath", Constants.wishlistInAccount);
 		addwishlist.wishlistInAccount.click();
 		Reporter.log("Wishlist section viewed successful",true);
-		//Login with email
-		/*CommonMethods.loginViaEmail();		
-		moveToElement(addcart.clothing);
-		Thread.sleep(2000);
-		addcart.dressAndJumpsuits.click();	
-		addcart.maxi.click();		
-		moveToElement(quickview.quickviewPLP);
-		quickview.quickviewIcon.click();		
-		quickview.quickAddToWishlist.click();
-		quickview.quickviewclose.click();
-		Thread.sleep(10000);
-		lgin.loginIcon.click();
-		Thread.sleep(10000);
-		addwishlist.wishlistInAccount.click();
-		Thread.sleep(10000);
-		lgin.loginIcon.click();
-		Thread.sleep(6000);
-		lgin.signOutButton.click();*/
+	
 }
 
 @Test(priority = 1)
@@ -92,29 +76,30 @@ public void AddToWishlistQuickviewLogin() throws Exception {
 			//CommonMethods.loginViaEmail();
 			//Reporter.log("Login successful",true);
 			Thread.sleep(3000);
-			WebDriverExplicitWait(driver, 10, "Xpath", Constants.clothing);
+			//WebDriverExplicitWait(driver, 10, "Xpath", Constants.clothing);
 			moveToElement(addcart.clothing);
-			Thread.sleep(5000);
+			//Thread.sleep(5000);
 			WebDriverExplicitWait(driver, 10, "Xpath", Constants.dressAndJumpsuits);
 			addcart.dressAndJumpsuits.click();	
 			addcart.maxi.click();		
-			moveToElement(quickview.quickviewPLP);
+			moveToElement(quickview.quickviewPLP);	
+			quickview.quickviewIcon.click();	
 			Reporter.log("Quickview window opened successful",true);
-			quickview.quickviewIcon.click();		
 			quickview.quickAddToWishlist.click();
 			Reporter.log("Item added to cart successful",true);
+			Thread.sleep(5000);
 			quickview.quickviewclose.click();
 			Thread.sleep(10000);
-			WebDriverExplicitWait(driver, 10, "Xpath", Constants.loginIcon);
+			//WebDriverExplicitWait(driver, 10, "Xpath", Constants.loginIcon);
 			lgin.loginIcon.click();
-			Thread.sleep(10000);
+			//Thread.sleep(10000);
 			WebDriverExplicitWait(driver, 10, "Xpath", Constants.wishlistInAccount);
 			addwishlist.wishlistInAccount.click();
 			Reporter.log("Wishlist section opened successful",true);
-			Thread.sleep(10000);
+			//Thread.sleep(10000);
 			WebDriverExplicitWait(driver, 10, "Xpath", Constants.loginIcon);
 			lgin.loginIcon.click();
-			Thread.sleep(5000);
+			//Thread.sleep(5000);
 			WebDriverExplicitWait(driver, 10, "Xpath", Constants.signOutButton);
 			lgin.signOutButton.click();
 			Reporter.log("Signout successful",true);
@@ -131,8 +116,8 @@ public void AddToWishlistPLP() throws Exception {
 	CommonMethods.loginViaEmail();	
 	Reporter.log("Login successful",true);
 	moveToElement(addcart.clothing);;
-	//Thread.sleep(3000);
-	WebDriverExplicitWait(driver, 10, "Xpath", Constants.clothing);
+	Thread.sleep(3000);
+	//WebDriverExplicitWait(driver, 10, "Xpath", Constants.clothing);
 	moveToElement(addcart.clothing);
 	//Thread.sleep(5000);
 	WebDriverExplicitWait(driver, 10, "Xpath", Constants.dressAndJumpsuits);
@@ -163,14 +148,14 @@ public void AddToWishlistPDP() throws Exception {
 	AddToWishlist_PO addwishlist = new AddToWishlist_PO(driver);
 	CommonMethods.loginViaEmail();	
 	Thread.sleep(2000);
-	WebDriverExplicitWait(driver, 10, "Xpath", Constants.clothing);
+	//WebDriverExplicitWait(driver, 10, "Xpath", Constants.clothing);
 	moveToElement(addcart.clothing);
-	Thread.sleep(2000);
+	//Thread.sleep(2000);
 	WebDriverExplicitWait(driver, 10, "Xpath", Constants.dressAndJumpsuits);
 	addcart.dressAndJumpsuits.click();
 	//moveToElement(quickview.quickviewPLP);
 	addcart.maxi.click();
-	Thread.sleep(6000);
+	//Thread.sleep(6000);
 	WebDriverExplicitWait(driver, 10, "Xpath", Constants.PLP);
 	addcart.PLP.click();
 	addwishlist.wishlistIconSignInPDP.click();
@@ -178,20 +163,20 @@ public void AddToWishlistPDP() throws Exception {
 	WebDriverExplicitWait(driver, 10, "Xpath", Constants.loginIcon);
 	lgin.loginIcon.click();
 	Thread.sleep(10000);
-	WebDriverExplicitWait(driver, 10, "Xpath", Constants.wishlistInAccount);
+	//WebDriverExplicitWait(driver, 10, "Xpath", Constants.wishlistInAccount);
 	addwishlist.wishlistInAccount.click();
 	Thread.sleep(10000);
-	WebDriverExplicitWait(driver, 10, "Xpath", Constants.loginIcon);
+	//WebDriverExplicitWait(driver, 10, "Xpath", Constants.loginIcon);
 	lgin.loginIcon.click();
-	Thread.sleep(2000);
+	//Thread.sleep(2000);
 	WebDriverExplicitWait(driver, 10, "Xpath", Constants.signOutButton);
 	lgin.signOutButton.click();
 }	
 
-/*@AfterTest
+@AfterTest
 public void closeBrowser() {
 
 	browserClose();
-}*/
+}
 }
 	
